@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "test/**/*.ts",
+    "test/**/*.tsx",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack"
+  ]
+}

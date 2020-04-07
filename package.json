@@ -1,0 +1,48 @@
+{
+  "name": "bike-reporter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext js,ts,tsx",
+    "typecheck": "tsc",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest"
+  },
+  "author": "Alejandro Frías",
+  "license": "ISC",
+  "volta": {
+    "node": "12.16.1",
+    "yarn": "1.22.4"
+  },
+  "dependencies": {
+    "csv-parse": "^4.8.8",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "next": "^9.3.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@afrias/eslint-config": "0.2.1",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^25.2.1",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.11.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "jest": "^25.2.7",
+    "jest-environment-jsdom": "^25.2.6",
+    "jest-environment-jsdom-global": "^1.2.1",
+    "prettier": "^2.0.4",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  }
+}
