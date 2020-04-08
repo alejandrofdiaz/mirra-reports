@@ -10,10 +10,11 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        paths: ['.'],
+        paths: ['.', 'src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
-      typescript: {},
+      typescript: {
+      },
     },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
