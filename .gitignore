@@ -81,7 +81,7 @@ web_modules/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+distfirebase_mock
 
 # Gatsby files
 .cache/
@@ -116,3 +116,6 @@ dist
 
 # Data
 data
+
+firebase_auth
+firebase_mock

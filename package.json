@@ -18,7 +18,10 @@
     "yarn": "1.22.4"
   },
   "dependencies": {
+    "camelcase-keys": "^6.2.2",
     "csv-parse": "^4.8.8",
+    "firebase-admin": "^8.10.0",
+    "i18n": "^0.8.6",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "next": "^9.3.4",
@@ -26,9 +29,10 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@afrias/eslint-config": "0.2.1",
+    "@afrias/eslint-config": "0.4.0",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/i18n": "^0.8.6",
     "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.149",
     "@types/node": "^13.11.0",

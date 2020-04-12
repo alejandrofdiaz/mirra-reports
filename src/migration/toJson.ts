@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import csvParseSync from 'csv-parse/lib/sync';
 import { readFile } from 'fs';
 import { Report } from 'models/Report';
@@ -14,6 +15,7 @@ function readCsvFile(filePath: string) {
 }
 
 function parseCsv(csvFile: string) {
+  // eslint-disable-next-line @typescript-eslint/camelcase
   return csvParseSync(csvFile, { columns: true, skip_empty_lines: true });
 }
 
