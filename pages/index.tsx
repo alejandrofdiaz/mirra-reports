@@ -1,20 +1,17 @@
-import { getReports } from 'api/Reports';
-import { GetStaticProps } from 'next';
 import React from 'react';
 
-const Home = () => <h1>Hello world</h1>;
+const Home = () => (
+  <section className="hero is-primary is-large">
+    <div className="hero-body">
+      <div className="container">
+        <h1 className="title">Bike Reporter</h1>
+        <h2 className="subtitle">
+          Esta aplicación tiene como objetivo llevar un registro de las
+          incidencias que suceden a los ciclistas en la ciudad.
+        </h2>
+      </div>
+    </div>
+  </section>
+);
 
 export default Home;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const reports = await getReports();
-  console.log(reports);
-
-  return new Promise((resolve) =>
-    resolve({
-      props: {
-        test: 'test',
-      },
-    }),
-  );
-};
