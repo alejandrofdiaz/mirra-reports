@@ -1,3 +1,5 @@
+type Dateable = string;
+
 interface VehicleData {
   vehicleId: string;
   vehicleColor: string;
@@ -13,14 +15,15 @@ interface DriverData {
 interface ReportedData extends VehicleData, DriverData {}
 
 interface EventData {
-  eventTime: Date;
+  eventTime: Dateable;
   eventLocation: string;
   eventLocationExtra: string;
   eventDescription: string;
 }
 
 export interface Report extends ReportedData, EventData {
-  timeAdded: Date;
+  timeAdded: Dateable;
+  id: string;
   userId: string;
   videoUrl: string;
   journeyUrl: string;
