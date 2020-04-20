@@ -5,13 +5,11 @@
 			"type": "node",
 			"request": "launch",
 			"name": "Launch Dev Server",
-			"program": "${workspaceFolder}/node_modules/next/dist/bin/next",
+			"program": "${workspaceFolder}/src/server.js",
 			"skipFiles": [
 				"<node_internals>/**"
 			]
 		},
-		
-
 		{
 			"name": "Migration/ToJson",
 			"type": "node",

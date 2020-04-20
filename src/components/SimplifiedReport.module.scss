@@ -1,0 +1,14 @@
+@use "bulma/sass/utilities/initial-variables" as *;
+
+.eventInfo {
+  display: block;
+}
+
+.wrapper {
+  @media (min-width: $tablet) {
+    margin-top: $block-spacing;
+  }
+  @media (min-width: $widescreen) {
+    width: $block-spacing * 20;
+  }
+}

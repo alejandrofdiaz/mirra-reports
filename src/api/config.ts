@@ -1,6 +1,5 @@
 import camelcase from 'camelcase-keys';
 import fs from 'fs';
-import locale from 'localeService';
 import path from 'path';
 
 type FirebaseAdmin = Record<
@@ -54,7 +53,7 @@ export const getMockFile = (): Record<string, unknown> => {
   try {
     return getFirstFileFromDir(MOCK_PATH);
   } catch (e) {
-    throw Error(locale.t('firebaseMockNotFound'));
+    throw Error('firebaseMockNotFound');
   }
 };
 
@@ -63,7 +62,7 @@ export const getAdminFile = (): FirebaseAdmin => {
     const file = getFirstFileFromDir(ADMIN_PATH);
     return camelcase(file);
   } catch (e) {
-    throw Error(locale.t('adminFileNotfound'));
+    throw Error('adminFileNotfound');
   }
 };
 

@@ -62,7 +62,7 @@ export const Header = () => {
       <LinkWraper isActive={isActiveMenu}>
         <Link label="Home" link="/" />
         <Link label="About us" link="/about" />
-        <Link label="My reports" link="/my-reports" />
+        <Link label="My reports" link="/reports" />
       </LinkWraper>
     </nav>
   );
