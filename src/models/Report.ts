@@ -1,11 +1,12 @@
 type Dateable = string;
+type Coordinates = Record<'lat' | 'lng', number>;
 
 interface VehicleData {
-  vehicleId: string;
-  vehicleColor: string;
   vehicleBrand: string;
-  vehicleModel: string;
+  vehicleColor: string;
   vehicleExtra: string;
+  vehicleId: string;
+  vehicleModel: string;
 }
 
 interface DriverData {
@@ -15,19 +16,20 @@ interface DriverData {
 interface ReportedData extends VehicleData, DriverData {}
 
 interface EventData {
-  eventTime: Dateable;
+  eventCoordinates: Coordinates;
+  eventDescription: string;
   eventLocation: string;
   eventLocationExtra: string;
-  eventDescription: string;
+  eventTime: Dateable;
 }
 
 export interface Report extends ReportedData, EventData {
-  timeAdded: Dateable;
   id: string;
+  isReported: boolean;
+  journeyUrl: string;
+  timeAdded: Dateable;
   userId: string;
   videoUrl: string;
-  journeyUrl: string;
-  isReported: boolean;
 }
 
 export type ReportKeys = keyof Report;
