@@ -17,7 +17,7 @@ export const StaticMap = (props: StaticMapProps) => {
       alt={alt}
       className={classnames({
         staticMap: true,
-        [className]: classnames,
+        [className]: className,
       })}
       src={url}
     />
