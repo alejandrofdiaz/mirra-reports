@@ -4,6 +4,9 @@ module.exports = {
     project: './tsconfig.eslint.json',
     tsconfigRootDir: './',
   },
+  globals: {
+    google: true,
+  },
   rules: {
     'import/no-default-export': 'off',
   },

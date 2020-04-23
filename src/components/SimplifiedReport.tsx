@@ -2,6 +2,8 @@ import Styles from 'components/SimplifiedReport.module.scss';
 import { SimplifiedReport as SimplifiedReportModel } from 'models/SimplifiedReport';
 import React from 'react';
 
+import { StaticMap } from './StaticMap';
+
 interface SimplifiedReportProps {
   currentReport: SimplifiedReportModel;
 }
@@ -10,9 +12,11 @@ export const SimplifiedReport = ({ currentReport }: SimplifiedReportProps) => (
   <article className={`card ${Styles.wrapper}`}>
     <div className="card-image">
       <figure className="image is-4by3">
-        <img
-          alt="Test"
-          src="https://bulma.io/images/placeholders/640x480.png"
+        <StaticMap
+          center={[currentReport.eventCoordinates]}
+          markers={[currentReport.eventCoordinates]}
+          size={{ height: 480, width: 640 }}
+          zoom={14}
         />
       </figure>
     </div>
