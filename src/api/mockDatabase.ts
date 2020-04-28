@@ -14,12 +14,25 @@ class FirebaseDatabaseMock {
     return this;
   }
 
-  orderByChild(_path: string) {
+  equalTo(id: string) {
+    const singleResult = this.scopedResponse[id];
+    this.scopedResponse = singleResult;
+    return this;
+  }
+
+  orderByChild(_) {
+    return this;
+  }
+
+  orderByKey(_) {
     return this;
   }
 
   on(_path: string, callback: SnapshotCallback) {
-    callback({ val: () => this.scopedResponse });
+    callback({
+      val: () => this.scopedResponse,
+      exists: () => !!this.scopedResponse,
+    });
   }
 }
 

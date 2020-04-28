@@ -19,18 +19,36 @@ export const getReports = () =>
     })),
   );
 
+export const getReport = (id: string) =>
+  new Promise((resolve, reject) => {
+    database
+      .ref('reports')
+      .orderByKey()
+      .equalTo(id)
+      .on('child_added', (snapshot) => {
+        if (snapshot.exists()) {
+          const values = snapshot.val();
+          resolve(values);
+          return;
+        }
+
+        reject();
+      });
+  }).then<Report>((report: Omit<Report, 'id'>) => ({ ...report, id }));
+
 export const getSimplifiedReports = (): Promise<SimplifiedReport[]> =>
   getReports().then((reports) =>
     reports.map((currentReport) =>
       pick(currentReport, [
+        'eventCoordinates',
         'eventDescription',
         'eventLocation',
         'eventLocationExtra',
         'eventTime',
+        'id',
         'vehicleBrand',
         'vehicleColor',
         'vehicleModel',
-        'id',
       ]),
     ),
   );

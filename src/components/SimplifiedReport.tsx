@@ -1,5 +1,6 @@
 import Styles from 'components/SimplifiedReport.module.scss';
 import { SimplifiedReport as SimplifiedReportModel } from 'models/SimplifiedReport';
+import Link from 'next/link';
 import React from 'react';
 
 import { StaticMap } from './StaticMap';
@@ -12,12 +13,16 @@ export const SimplifiedReport = ({ currentReport }: SimplifiedReportProps) => (
   <article className={`card ${Styles.wrapper}`}>
     <div className="card-image">
       <figure className="image is-4by3">
-        <StaticMap
-          center={[currentReport.eventCoordinates]}
-          markers={[currentReport.eventCoordinates]}
-          size={{ height: 480, width: 640 }}
-          zoom={14}
-        />
+        <Link href={`/report/${currentReport.id}`}>
+          <a>
+            <StaticMap
+              center={[currentReport.eventCoordinates]}
+              markers={[currentReport.eventCoordinates]}
+              size={{ height: 480, width: 640 }}
+              zoom={14}
+            />
+          </a>
+        </Link>
       </figure>
     </div>
     <div className={`card-content ${Styles.eventInfo}`}>

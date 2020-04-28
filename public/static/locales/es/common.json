@@ -1,5 +1,9 @@
 {
   "adminFileNotfound": "El archivo de firebase-admin no se ha encontrado.",
   "firebaseMockNotFound": "El archivo de firebase-mock no se ha encontrado",
-  "reports": "Reportes"
+  "reports": "Reportes",
+  "male": "Hombre",
+  "female:": "Mujer",
+  "other": "Otro",
+  "dont_know": "No lo sé"
 }
