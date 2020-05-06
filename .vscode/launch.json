@@ -5,7 +5,10 @@
 			"type": "node",
 			"request": "launch",
 			"name": "Launch Dev Server",
-			"program": "${workspaceFolder}/src/server.js",
+			"cwd": "${workspaceFolder}/packages/web",
+			"program": "${workspaceFolder}/packages/web/src/server.js",
+			"runtimeArgs": ["-r", "dotenv/config"],
+			"args": ["dotenv_config_path=../../.env"],
 			"skipFiles": [
 				"<node_internals>/**"
 			]

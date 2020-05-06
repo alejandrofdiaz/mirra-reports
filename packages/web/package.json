@@ -1,0 +1,53 @@
+{
+  "name": "bike-reporter-web",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext js,ts,tsx",
+    "typecheck": "tsc",
+    "dev": "node -r dotenv/config src/server.js dotenv_config_path=../../.env",
+    "build": "next build",
+    "start": "NODE_ENV=production node src/server.js",
+    "test": "jest"
+  },
+  "author": "Alejandro Frías",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.2",
+    "camelcase-keys": "^6.2.2",
+    "classnames": "^2.2.6",
+    "csv-parse": "^4.9.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.11.0",
+    "lodash": "^4.17.15",
+    "next": "^9.3.6",
+    "next-i18next": "^4.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.5"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/googlemaps": "^3.39.4",
+    "@types/i18n": "^0.8.6",
+    "@types/jest": "^25.2.1",
+    "@types/lodash": "^4.14.150",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "jest": "^26.0.1",
+    "jest-environment-jsdom": "^26.0.1",
+    "jest-environment-jsdom-global": "^2.0.2",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  }
+}

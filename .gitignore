@@ -115,7 +115,7 @@ distfirebase_mock
 .pnp.*
 
 # Data
-data
+packages/web/data
 
-firebase_auth
-firebase_mock
+packages/web/firebase_auth
+packages/web/firebase_mock
